@@ -1,0 +1,111 @@
+The HR Analysis Project focuses on analyzing employee data to understand workforce trends, performance, and attrition. The goal is to help HR teams make data-driven decisions on hiring, employee retention, and engagement strategies.
+
+Using Power BI, this project visualizes HR metrics such as employee distribution, departmental performance, attrition rates, and key KPIs to provide actionable insights for workforce management.
+
+🎯 Objectives
+
+Evaluate employee demographics (age, gender, education).
+
+Analyze employee attrition and identify high-risk groups.
+
+Examine salary distribution, experience levels, and performance ratings.
+
+Compare department-wise performance and turnover.
+
+Build an interactive dashboard for HR insights and reporting.
+
+📊 Key Metrics (KPIs)
+KPI	Description
+Total Employees	Total number of active employees
+Attrition Count	Number of employees who left
+Attrition Rate (%)	Percentage of employees who left
+Average Age	Mean age of employees
+Average Salary	Mean salary across roles or departments
+Years at Company	Average tenure of employees
+Gender Diversity Ratio	Male-to-female ratio
+Department Attrition	Attrition percentage per department
+🧠 Key Insights
+
+Young employees (age < 30) have higher turnover rates.
+
+Departments like R&D and Sales exhibit the highest attrition.
+
+Employees with higher salaries and longer tenure are less likely to leave.
+
+Job satisfaction is a key factor influencing retention.
+
+Gender diversity is balanced in most departments, but leadership roles can be improved.
+
+⚙️ Tools & Technologies
+
+Power BI – Dashboard creation and visualization
+
+Power Query – Data cleaning and transformation
+
+DAX (Data Analysis Expressions) – KPI and metric calculations
+
+Excel / CSV – HR dataset source
+
+(Optional) SQL / Python – Data preprocessing
+
+🧮 Sample DAX Measures
+Total Employees = COUNT(HR[EmployeeID])
+
+Attrition Count = CALCULATE(
+    COUNT(HR[EmployeeID]),
+    HR[Attrition] = "Yes"
+)
+
+Attrition Rate (%) = DIVIDE([Attrition Count], [Total Employees], 0) * 100
+
+Average Salary = AVERAGE(HR[MonthlyIncome])
+
+Average Tenure = AVERAGE(HR[YearsAtCompany])
+
+📁 Project Structure
+HR-Analysis/
+│
+├── Data/
+│   └── hr_data.csv
+│
+├── Dashboard/
+│   └── HR_Insights_Dashboard.pbix
+│
+├── Report/
+│   └── HR_Analysis_Report.pdf
+│
+└── README.md
+
+📈 Dashboard Features
+
+KPI Cards – Total employees, attrition rate, average salary, and age
+
+Department Analysis – Performance and attrition comparison
+
+Demographics – Gender, age, and education level insights
+
+Attrition Breakdown – By department, tenure, and salary
+
+Interactive Filters – Filter by department, role, gender, or experience
+
+🎯 Conclusion
+
+The HR Analysis Dashboard provides actionable insights for HR teams to:
+
+Identify at-risk employees and reduce turnover
+
+Improve employee satisfaction and engagement
+
+Optimize salary structures and promotions
+
+Make data-driven workforce planning decisions
+
+🔮 Future Enhancements
+
+Predictive modeling for employee attrition risk
+
+Integration with real-time HR systems (Workday, SAP HR)
+
+Incorporation of employee satisfaction survey data
+
+Recruitment pipeline and hiring trend analysis
